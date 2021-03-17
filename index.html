@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Permite ver la pagina en cualquier dispositivo-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Título de la pagina-->
+  <title>PDI 2021-2</title>
+  <!--Importamos archivos necesarios para el diseño de la interfaz-->
+  <link rel="stylesheet" href="bootStrap/bootstrap.min.css">
+  <script src="bootStrap/jquery.min.js"></script>
+  <script src="bootStrap/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--Elegir filtro a aplicar-->
+  <div id="container">
+    <div id="navega">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #8936e7; color: white;" id="nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            
+            <!--Filtro tonos de gris-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tonos de Gris
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <!--Nombres sacados de la pagina tannerhelland.com-->
+                <a class="dropdown-item" href="#" id="gris1">1.Averaging</a>
+                <a class="dropdown-item" href="#" id="gris2">2.Luma</a>
+                <a class="dropdown-item" href="#" id="gris3">3.Luma 2</a>
+                <a class="dropdown-item" href="#" id="gris4">4.Desaturación</a>
+                <a class="dropdown-item" href="#" id="gris5">5.Descomposición máx.</a>
+                <a class="dropdown-item" href="#" id="gris6">6. Descomposición mín.</a>
+                <a class="dropdown-item" href="#" id="gris7">7.Gris = Rojo</a>
+                <a class="dropdown-item" href="#" id="gris8">8.Gris = Verde</a>
+                <a class="dropdown-item" href="#" id="gris9">9.Gris = Azul</a>
+              </div>
+            </li>
+            
+            <!--Filtro Brillo-->
+            <li class="nav-item">
+              <a class="nav-link active" href="#" id="brillo" data-toggle="modal" data-target="#Modal">
+                Brillo
+              </a>
+            </li>
+    
+            <!--Filtro Mosaico-->
+            <li class="nav-item">
+              <a class="nav-link active" href="#" id="mosaico" data-toggle="modal" data-target="#Modal">
+                Mosaico
+              </a>
+            </li>
+          </ul>
+
+          <!--Cargar imagen,Guardar imagen y Quitar filtro a la imagen-->
+          <span class="navbar-text">
+            <a href="#" id="abrir">&nbsp;Elegir Imagen&nbsp;</a>
+            <a href="#" id="guardar">&nbsp;Descargar Imagen&nbsp;</a>
+            <a href="#" id="rehacer">&nbsp;Quitar Filtro&nbsp;</a>
+          </span>
+        </div>
+      </nav>
+
+      <!--Instrucciones, se pueden esconder para que el usuario pueda consultarlas cuando desee.-->   
+   <div id="accordion">
+    <div class="card">
+      <div class="card-header" style="background-color: #8936e7;" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" style="color: white;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            INSTRUCCIONES
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body" style="background-color: #ede4f8;">
+          <ol>
+            <li>Para subir una imagen, dar click en <em>Elegir Imagen</em>.</li>
+            <li>Una vez elegida la imagen, se puede elegir el filtro a aplicar sobre la imagen.</li>
+            <li>Una vez que se haya aplicado el filtro se puede descargar la imagen sólo basta con dar click en <em>Descargar Imagen</em>.</li>
+            <li>Si se desea aplicar otro filtro a la imagen, hay que dar click en <em>Quitar Filtro</em> para regresar a la imagen original y aplicar el filtro deseado.</li>
+            <li>Si desea esconder las instrucciones de click sobre <em>INSTRUCCIONES</em></li>
+          </ol>
+          NOTA: Para el filtro de brillo se pide la cantidad a aumentar o disminuir de la imagen, si se quiere aumentar hay que poner números positivos
+          y si se quiere disminuir hay que poner números negativos.
+        </div>
+      </div>
+    </div>     
+  </div>
+
+  <!--canvas a dibujar-->
+    <div id="lienzo">
+      <!--Imagen Original-->
+      <div class="col-sm-6">
+        <h5><strong>ORIGINAL</strong></h5>
+      <canvas id="myCanva" width=520 height=420></canvas>
+      </div>
+      <div class="col-sm-5">
+        <!--Imagen Editada-->
+        </h5><strong>CON FILTRO</strong></h5>
+       <canvas id="canvasFiltro" width=520 height=420></canvas>
+      </div>            
+   </div>
+   <!--Script principal del proyecto-->
+   <script type="module" src="../PDDI/src/Interfaz.js"></script>   
+</body>
+
+<!-- Para elegir el archivo a subir-->
+<input type="file" id="file" />
+
+<!--Pie de pagina-->
+<div class="footer" id="nota">
+  Alumna: Vianey Aileen Borras Pablo<br>
+  Curso: Proceso Digital de imágenes 2021-2 <br>
+  Grupo: 7012
+  
+</div>
+
+</html>
