@@ -2,6 +2,8 @@
 import TonosGris from "../Filtros/TonosGris.js";
 import Brillo from "../Filtros/Brillo.js";
 import Mosaico from "../Filtros/Mosaico.js";
+import AltoContraste from "../Filtros/AltoContraste.js"
+import Inverso from "../Filtros/Inverso.js";
 //Clase que habilita los botónes para cada filtro,
 //para subir/guardar una imagen,
 //y quitar un filtro
@@ -14,6 +16,8 @@ export default class Controller {
     this.tonosGris = new TonosGris(modelo);
     this.filtroBrillo = new Brillo(modelo);
     this.filtroMosaico = new Mosaico(modelo);
+    this.filtroAltoContraste = new AltoContraste(modelo);
+    this.filtroInverso = new Inverso(modelo);
   }
 
   //Gris 1
@@ -66,8 +70,19 @@ export default class Controller {
     this.filtroBrillo.brillo(parseInt(prompt('Indique la cantidad de brillo que desea: ')));
   }
 
+  //Mosaico
   mosaico() {
     this.filtroMosaico.mosaico(parseInt(prompt('¿Cuántos pixeles quiere para el mosaico?')));
+  }
+
+  //Alto Contraste
+  altoContraste() {
+    this.filtroAltoContraste.altoContraste();
+  }
+
+  //Inverso
+  inverso() {
+    this.filtroInverso.inverso();
   }
 
   //Abrir una imagen

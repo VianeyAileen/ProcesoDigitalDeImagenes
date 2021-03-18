@@ -78,6 +78,15 @@ export default class View {
     document.getElementById("mosaico").addEventListener("click", () => {
       this.controlador.mosaico();
     });
+
+    //Alto Contraste
+    document.getElementById("alto_contraste").addEventListener("click", () => {
+      this.controlador.altoContraste();
+    });
+
+    document.getElementById("inverso").addEventListener("click", () => {
+      this.controlador.inverso();
+    });
   }
 
   //Mostrar canvas
