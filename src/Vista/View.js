@@ -95,6 +95,10 @@ export default class View {
     document.getElementById("blur2").addEventListener("click", () => {
       this.controlador.blur2();
     });
+
+    document.getElementById("motion_blur").addEventListener("click", () => {
+      this.controlador.motionBlur();
+    });
   }
 
   //Mostrar canvas

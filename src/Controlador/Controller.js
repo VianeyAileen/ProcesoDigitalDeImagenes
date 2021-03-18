@@ -97,6 +97,11 @@ export default class Controller {
     this.filtroBlur.blur2();
   }
 
+  //Motion Blur
+  motionBlur() {
+    this.filtroBlur.motionBlur();
+  }
+
   //Abrir una imagen
   open() {
     let file_input = document.createElement("input");
