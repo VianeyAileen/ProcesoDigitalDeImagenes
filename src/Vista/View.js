@@ -99,6 +99,10 @@ export default class View {
     document.getElementById("motion_blur").addEventListener("click", () => {
       this.controlador.motionBlur();
     });
+
+    document.getElementById("encontrar_bordes").addEventListener("click", () => {
+      this.controlador.encontrarBordes();
+    });
   }
 
   //Mostrar canvas

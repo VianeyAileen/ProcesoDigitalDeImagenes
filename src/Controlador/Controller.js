@@ -5,6 +5,7 @@ import Mosaico from "../Filtros/Mosaico.js";
 import AltoContraste from "../Filtros/AltoContraste.js"
 import Inverso from "../Filtros/Inverso.js";
 import Blur from "../Filtros/Blur.js"
+import EncontrarBordes from "../Filtros/EncontrarBordes.js"
 //Clase que habilita los botónes para cada filtro,
 //para subir/guardar una imagen,
 //y quitar un filtro
@@ -20,6 +21,7 @@ export default class Controller {
     this.filtroAltoContraste = new AltoContraste(modelo);
     this.filtroInverso = new Inverso(modelo);
     this.filtroBlur = new Blur(modelo);
+    this.filtroEB = new EncontrarBordes(modelo);
   }
 
   //Gris 1
@@ -100,6 +102,11 @@ export default class Controller {
   //Motion Blur
   motionBlur() {
     this.filtroBlur.motionBlur();
+  }
+
+  //Encontrar Bordes
+  encontrarBordes() {
+    this.filtroEB.encontrarBordes();
   }
 
   //Abrir una imagen
