@@ -6,7 +6,7 @@ export default class Mosaico {
         this.modelo = modelo;
     }
 
-    //Obtenemos color de cada pixel.
+    //Obtenemos el color de cada pixel.
     getPixel(x, y, width) {
         var color = x * 4 + y * (width * 4);
         return { red: color, green: color + 1, blue: color + 2};

@@ -87,6 +87,14 @@ export default class View {
     document.getElementById("inverso").addEventListener("click", () => {
       this.controlador.inverso();
     });
+
+    document.getElementById("blur1").addEventListener("click", () => {
+      this.controlador.blur1();
+    });
+
+    document.getElementById("blur2").addEventListener("click", () => {
+      this.controlador.blur2();
+    });
   }
 
   //Mostrar canvas
