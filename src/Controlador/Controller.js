@@ -4,8 +4,9 @@ import Brillo from "../Filtros/Brillo.js";
 import Mosaico from "../Filtros/Mosaico.js";
 import AltoContraste from "../Filtros/AltoContraste.js"
 import Inverso from "../Filtros/Inverso.js";
-import Blur from "../Filtros/Blur.js"
-import EncontrarBordes from "../Filtros/EncontrarBordes.js"
+import Convolucion from "../Filtros/Convolucion.js"
+import Componentes from "../Filtros/Componentes.js"
+
 //Clase que habilita los botónes para cada filtro,
 //para subir/guardar una imagen,
 //y quitar un filtro
@@ -20,8 +21,8 @@ export default class Controller {
     this.filtroMosaico = new Mosaico(modelo);
     this.filtroAltoContraste = new AltoContraste(modelo);
     this.filtroInverso = new Inverso(modelo);
-    this.filtroBlur = new Blur(modelo);
-    this.filtroEB = new EncontrarBordes(modelo);
+    this.filtroConv = new Convolucion(modelo);
+    this.filtroComponentes = new Componentes(modelo);
   }
 
   //Gris 1
@@ -91,22 +92,37 @@ export default class Controller {
 
   //Blur 1
   blur1() {
-    this.filtroBlur.blur1();
+    this.filtroConv.blur1();
   }
 
   //Blur 2
   blur2() {
-    this.filtroBlur.blur2();
+    this.filtroConv.blur2();
   }
 
   //Motion Blur
   motionBlur() {
-    this.filtroBlur.motionBlur();
+    this.filtroConv.motionBlur();
   }
 
   //Encontrar Bordes
   encontrarBordes() {
-    this.filtroEB.encontrarBordes();
+    this.filtroConv.encontrarBordes();
+  }
+
+  //Sharpen
+  sharpen() {
+    this.filtroConv.sharpen();
+  }
+
+  //Emboss
+  emboss() {
+    this.filtroConv.emboss();
+  }
+
+  //Componentes RGB
+  componentes() {
+    this.filtroComponentes.componentes();
   }
 
   //Abrir una imagen

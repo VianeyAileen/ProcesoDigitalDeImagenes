@@ -103,6 +103,18 @@ export default class View {
     document.getElementById("encontrar_bordes").addEventListener("click", () => {
       this.controlador.encontrarBordes();
     });
+
+    document.getElementById("sharpen").addEventListener("click", () => {
+      this.controlador.sharpen();
+    });
+
+    document.getElementById("emboss").addEventListener("click", () => {
+      this.controlador.emboss();
+    });
+
+    document.getElementById("componentes").addEventListener("click", () => {
+      this.controlador.componentes();
+    });
   }
 
   //Mostrar canvas

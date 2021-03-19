@@ -38,13 +38,14 @@ export default class AltoContraste {
             var rgb = [red, green, blue];
 
             // Si cada pixel es mayor a 127, pinto un pixel blanco (255,255,255)
-            if(rgb[0] > 127) valor[i] = 0
-            if(rgb[1] > 127) valor[i+1] = 0
-            if(rgb[2] > 127) valor[i+2] = 0
+            if(rgb[0] > 127) valor[i] = 255
+            if(rgb[1] > 127) valor[i+1] = 255
+            if(rgb[2] > 127) valor[i+2] = 255
 
-            if(rgb[0] < 127) valor[i] = 255
-            if(rgb[1] < 127) valor[i+1] = 255
-            if(rgb[2] < 127) valor[i+2] = 255            
+            // Si cada pixel es menor a 127, pinto un punto negro (0,0,0)
+            if(rgb[0] < 127) valor[i] = 0
+            if(rgb[1] < 127) valor[i+1] = 0
+            if(rgb[2] < 127) valor[i+2] = 0            
         }
         //Aplicamos el filtro a la imagen.
         this.modelo.contextA.putImageData(ponPixel, 0, 0);

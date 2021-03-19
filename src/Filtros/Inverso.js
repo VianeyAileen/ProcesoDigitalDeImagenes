@@ -32,24 +32,21 @@ export default class Inverso {
 
         // Implementación del filtro Inverso
         for (var i = 0; i < valor.length; i+= 4) {
-            /*var red = valor[i];
+
+            var red = valor[i];
             var blue = valor[i+1];
             var green = valor[i+2];
-            var rgb = [red, green, blue];*/
+            var rgb = [red, green, blue];
 
-            valor[i] = valor[i];
-            valor[i+1] = valor[i+1];
-            valor[i+2] = valor[i+2];
+            // Si cada pixel es mayor a 127, pinto un pixel negro (0,0,0)
+            if(rgb[0] > 127) valor[i] = 0
+            if(rgb[1] > 127) valor[i+1] = 0
+            if(rgb[2] > 127) valor[i+2] = 0
 
-            // Si cada pixel es mayor a 127, pinto un pixel blanco (255,255,255)
-            if (valor[i] > 127) valor[i] = 255;
-            if (valor[i+1] > 127) valor[i+1] = 255;
-            if (valor[i+2] > 127) valor[i+2] = 255;
-
-            // Si cada pixel es menor a 127, pinto un pixel negro (0, 0, 0)
-            if (valor[i] < 127) valor[i] = 0;
-            if (valor[i+1] < 127) valor[i+1] = 0;
-            if (valor[i+2] < 127) valor[i+2] = 0;
+            // Si cada pixel es menor a 127, pinto un punto blanco (255,255,255)
+            if(rgb[0] < 127) valor[i] = 255
+            if(rgb[1] < 127) valor[i+1] = 255
+            if(rgb[2] < 127) valor[i+2] = 255           
             
         }
         //Aplicamos el filtro a la imagen.
