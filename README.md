@@ -17,12 +17,23 @@ Filtros Disponibles:
     - Gris = Rojo
     - Gris = Verde
     - Gris = Azul
+- Convoluciones
+    - Blur 1
+    - Blur 2
+    - Motion Blur
+    - Encontrar Bordes
+    - Sharpen
+    - Emboss
 - Brillo
 - Mosaico
+- Alto Contraste
+- Filtro Inverso
+- Componentes RGB
+
 
 ## Forma de ejecución :octocat:
 Para ejecutar el programa dar click en el siguiente link:
-https://vianeyaileen.github.io/PDDI/#
+https://vianeyaileen.github.io/ProcesoDigitalDeImagenes/
 
 Nota: El programa sólo es compatible con los navegadores de Chrome y Safari.
 
