@@ -9,7 +9,7 @@ export default class Convolucion {
     //Función que implementa el filtro blur 1.
     blur1() {
         // Matriz
-        var matriz = {
+        let matriz = {
             valores:
                 [ 0.0, 0.2, 0.0,
                   0.2, 0.2, 0.2,
@@ -24,14 +24,14 @@ export default class Convolucion {
     //Función que implementa el filtro blur 2.
     blur2() {
         // Matriz
-        var matriz = {
+        let matriz = {
             // Dividimos el factor entre la suma de todos los elementos que es 13.
             valores:
-                [ 0, 0, 1/13, 0, 0,
-                  0, 1/13, 1/13, 1/13, 0,
-                  1/13, 1/13, 1/13, 1/13, 1/13,
-                  0, 1/13, 1/13, 1/13, 0,
-                  0, 0, 1/13, 0, 0 ],
+                [ 0,   0,   1/13,   0,  0,
+                  0,  1/13, 1/13, 1/13, 0,
+                1/13, 1/13, 1/13, 1/13, 1/13,
+                  0,  1/13, 1/13, 1/13, 0,
+                  0,   0,   1/13,   0,  0 ],
             //Indicamos que la matriz es de tamaño 5x5.
             n:5, m:5
         }
@@ -43,7 +43,7 @@ export default class Convolucion {
     //La imagen se vera con movimiento, en este caso el movimiento se verá de arriba hacia abajo y de izquierda a derecha.
     motionBlur(){
         //Matriz
-        var matriz = {
+        let matriz = {
             // Dividimos el factor entre 9.
             valores:
                 [ 1/9, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -65,7 +65,7 @@ export default class Convolucion {
     // Función que implementa el filtro Emboss.
     emboss() {
         // Matriz
-        var matriz = {
+        let matriz = {
             valores:
                 [ -1, -1, -1, -1, 0,
                   -1, -1, -1,  0, 1,
@@ -82,11 +82,11 @@ export default class Convolucion {
     // Función que implementa el filtro Encontrar Bordes.
     encontrarBordes() {
         // Matriz
-        var matriz = {
+        let matriz = {
             valores:
                 [ -1, 0, 0, 0, 0,
                   0, -2, 0, 0, 0,
-                  0, 0, 6, 0, 0,
+                  0,  0, 6, 0, 0,
                   0, 0, 0, -2, 0,
                   0, 0, 0, 0, -1 ],
             //Indicamos que la matriz es de tamaño 5x5.
@@ -99,10 +99,10 @@ export default class Convolucion {
     // Función que implementa el filtro Sharpen.
     sharpen() {
         // Matriz
-        var matriz = {
+        let matriz = {
             valores:
                 [ -1, -1, -1,
-                  -1, 9, -1,
+                  -1,  9, -1,
                   -1, -1, -1 ],
             //Indicamos que la matriz es de tamaño 3x3.
             n:3, m:3
@@ -113,28 +113,28 @@ export default class Convolucion {
 
     //Obtenemos el color de cada pixel
     getPixel(x, y, width) {
-        var color = x * 4 + y * (width * 4);
+        let color = x * 4 + y * (width * 4);
         return { red: color, green: color + 1, blue: color + 2, alpha: color + 3};
     }
 
     // Funcion auxiliar que calcula la convolución y recibe como parámetro una matriz
     convolucion(matriz) {
         // Leemos los datos de la imagen
-        var ponPixel = this.modelo.nuevoCtx.getImageData(0, 0, this.modelo.nuevoCanvas.width, this.modelo.nuevoCanvas.height);
+        let ponPixel = this.modelo.nuevoCtx.getImageData(0, 0, this.modelo.nuevoCanvas.width, this.modelo.nuevoCanvas.height);
         // Crea un nuevo objeto ImageData en blanco con las dimensiones especificadas.
-        var ponPixelNuevo = this.modelo.nuevoCtx.createImageData(this.modelo.nuevoCanvas.width, this.modelo.nuevoCanvas.height);
+        let ponPixelNuevo = this.modelo.nuevoCtx.createImageData(this.modelo.nuevoCanvas.width, this.modelo.nuevoCanvas.height);
 
-        var columna = Math.floor(matriz.n / 2);
-        var fila = Math.floor(matriz.m / 2);
-        var x, y, color_i, colorNuevo;
+        let columna = Math.floor(matriz.n / 2);
+        let fila = Math.floor(matriz.m / 2);
+        let x, y, color_i, colorNuevo;
 
         // Recorremos cada pixel de la imagen
-        for (var i = columna; i < this.modelo.nuevoCanvas.width - columna; i++) {
-            for (var j = fila; j < this.modelo.nuevoCanvas.height - fila; j++) {
+        for (let i = columna; i < this.modelo.nuevoCanvas.width - columna; i++) {
+            for (let j = fila; j < this.modelo.nuevoCanvas.height - fila; j++) {
                 colorNuevo = { red: 0, green: 0, blue: 0 };
 
                 // Recorremos cada elemento de la matrix
-                for (var entrada = 0; entrada < matriz.valores.length; entrada++) {
+                for (let entrada = 0; entrada < matriz.valores.length; entrada++) {
                     x = (entrada % matriz.n) - columna;
                     y = Math.floor(entrada / matriz.n) - fila;
 

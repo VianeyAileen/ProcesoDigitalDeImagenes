@@ -55,7 +55,7 @@ export default class Model {
   //Regresamos los valores originales.
   putImage(image) {
     this.nuevoCtx.clearRect(0, 0, this.nuevoCanvas.width, this.nuevoCanvas.height);
-    this.nuevoCtx.drawImage(image, 0, 0, 520, 420);
+    this.nuevoCtx.drawImage(image, 0, 0, 500, 400);
 
     let img = document.createElement("img");
     img.src = this.nuevoCanvas.toDataURL("image/png");
@@ -69,7 +69,7 @@ export default class Model {
       this.undo_step--;
 
       this.nuevoCtx.clearRect(0, 0, this.nuevoCanvas.width, this.nuevoCanvas.height);
-      this.nuevoCtx.drawImage(this.undo_list[this.undo_step], 0, 0, 520, 420);
+      this.nuevoCtx.drawImage(this.undo_list[this.undo_step], 0, 0, 500, 400);
     }
   }
 }

@@ -12,7 +12,7 @@ export default class AltoContraste {
         var valor = ponPixel.data;
         //Implementación del filtro.
         for (var i = 0; i < valor.length; i += 4) {
-            var gray = (valor[i]+valor[i+1]+valor[i+2])/3;
+            var gray = 0.3*valor[i]+0.59*valor[i+1]+0.11*valor[i+2];
             valor[i] = gray;
             valor[i+1] = gray;
             valor[i+2] = gray;            
