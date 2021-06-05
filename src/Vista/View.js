@@ -115,6 +115,53 @@ export default class View {
     document.getElementById("componentes").addEventListener("click", () => {
       this.controlador.componentes();
     });
+
+    //Colores sin letra
+    document.getElementById("colores_sin_letras").addEventListener("click", () => {
+      $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
+      this.controlador.colorM();
+    })
+
+    //Tonos grises
+    document.getElementById("tonos_de_gris").addEventListener("click", () => {
+      $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
+      this.controlador.colorG();
+    })
+
+    document.getElementById("letras_bn").addEventListener("click", () => {
+      $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
+      this.controlador.letras16();
+    })
+
+    document.getElementById("colores_16").addEventListener("click", () => {
+      $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
+      this.controlador.colores16()
+    })
+
+    document.getElementById("gris_16").addEventListener("click", () => {
+      $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
+      this.controlador.gris16()
+    })
+
+    document.getElementById("frase").addEventListener("click", () => {
+      $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
+      this.controlador.frase();
+    })
+
+    document.getElementById("domino_b").addEventListener("click", () => {
+      $('#lienzo').append("<div id='dominoblanco' class = 'dominoblanco'><div>");
+      this.controlador.dominoB();
+    })
+
+    document.getElementById("domino_n").addEventListener("click", () => {
+      $('#lienzo').append("<div id='dominonegro' class = 'dominonegro'><div>");
+      this.controlador.dominoN();
+    })
+
+    document.getElementById("naipes").addEventListener("click", () => {
+      $('#lienzo').append("<div id='cartas' class = 'cartas'><div>");
+      this.controlador.naipes();
+    })
   }
 
   //Mostrar canvas

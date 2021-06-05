@@ -63,6 +63,35 @@
                 <a class="dropdown-item" href="#" id="emboss">Emboss</a>
               </div>
             </li>
+
+            <!--Filtros Letras -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Letras
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#" id="colores_sin_letras">Colores sin letra</a>
+                <a class="dropdown-item" href="#" id="tonos_de_gris">Tonos de gris</a>
+                <a class="dropdown-item" href="#" id="letras_bn">16 letras</a>
+                <a class="dropdown-item" href="#" id="colores_16">Colores + 16 letras</a>
+                <a class="dropdown-item" href="#" id="gris_16">Tonos de gris + 16 letras</a>
+                <a class="dropdown-item" href="#" id="frase">Frase</a>
+              </div>
+            </li>
+
+            <!--Filtro Naipes y Dominó -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Imagen con...
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#" id="domino_b">Dominó blanco</a>
+                <a class="dropdown-item" href="#" id="domino_n">Dominó negro</a>
+                <a class="dropdown-item" href="#" id="naipes">Naipes</a>
+              </div>
+            </li>
             
             <!--Filtro Brillo-->
             <li class="nav-item">
@@ -129,8 +158,11 @@
             <li>Si se desea aplicar otro filtro a la imagen, hay que dar click en <em>Quitar Filtro</em> para regresar a la imagen original y aplicar el filtro deseado.</li>
             <li>Si desea esconder las instrucciones de click sobre <em>INSTRUCCIONES</em></li>
           </ol>
-          NOTA: Para el filtro de brillo se pide la cantidad a aumentar o disminuir de la imagen, si se quiere aumentar hay que poner números positivos
-          y si se quiere disminuir hay que poner números negativos.
+          NOTA 1: Para el filtro de brillo se pide la cantidad a aumentar o disminuir de la imagen, si se quiere aumentar hay que poner números positivos
+          y si se quiere disminuir hay que poner números negativos. <br>
+          NOTA 2: Para los filtros de <em>Letras</em> e <em>Imagen con...</em> hay que esperar de 4 a 5 segundos para obtener la imagen editada.<br>
+          La imagen se mostrará por toda la pantalla con zoom para apreciar más los detalles.<br>
+          Si se desea aplicar otro filtro que este dentro de <em>Letras</em> e <em>Imagen con...</em> hay que recargar la página.
         </div>
       </div>
     </div>     
@@ -150,7 +182,7 @@
       </div>            
    </div>
    <!--Script principal del proyecto-->
-   <script type="module" src="../PDDI/src/Interfaz.js"></script>   
+   <script type="module" src="../ProcesoDigitalDeImagenes/src/Interfaz.js"></script>   
 </body>
 
 <!-- Para elegir el archivo a subir-->

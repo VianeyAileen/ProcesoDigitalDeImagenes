@@ -55,3 +55,50 @@ canvas {
     text-align: center;
     color: rgb(160, 160, 152);
 }
+
+.palabra{
+    font-family: monospace;
+    font-size: 9px;
+    text-align: center;
+    line-height: .7em;
+    background-color: white;
+}
+
+.dominoblanco{
+    font-family: dominoblanco;
+    font-size: 6px;
+    line-height: .7em;
+    background-color: white;
+}
+
+.dominonegro{
+    font-family: dominonegro;
+    font-size: 6px;
+    line-height: .7em;
+    background-color: white;
+}
+
+.cartas{
+    font-family: naipescartas;
+    font-size: 9px;
+    line-height: .7em;
+    background-color: white;
+}
+
+@font-face {
+    font-family: 'dominoblanco';
+    src: url(fonts/Lasvwd__.ttf);
+    font-style: regular;
+}
+
+@font-face {
+    font-family: 'dominonegro';
+    src: url(fonts/Lasvbld_.ttf);
+    font-style: regular;
+}
+
+@font-face {
+    font-family: 'naipescartas';
+    src: url(fonts/PLAYCRDS.TTF);
+    font-style: regular;
+}

@@ -1,11 +1,16 @@
 //impotamos los filtros.
-import TonosGris from "../Filtros/TonosGris.js";
-import Brillo from "../Filtros/Brillo.js";
-import Mosaico from "../Filtros/Mosaico.js";
-import AltoContraste from "../Filtros/AltoContraste.js"
-import Inverso from "../Filtros/Inverso.js";
-import Convolucion from "../Filtros/Convolucion.js"
-import Componentes from "../Filtros/Componentes.js"
+import TonosGris from "..//Filtros/Tarea 1/TonosGris.js"
+import Brillo from "../Filtros/Tarea 1/Brillo.js"
+import Mosaico from "../Filtros/Tarea 1/Mosaico.js"
+import AltoContraste from "../Filtros/Tarea 2/AltoContraste.js"
+import Inverso from "../Filtros/Tarea 2/Inverso.js"
+import Convolucion from "../Filtros/Tarea 2/Convolucion.js"
+import Componentes from "../Filtros/Tarea 2/Inverso.js"
+import Letras from "../Filtros/Tarea 3/Letras.js"
+import Combinacion from "../Filtros/Tarea 3/Combinacion.js"
+import Frase  from "../Filtros/Tarea 3/Frase.js"
+import Domino from "../Filtros/Tarea 3/Domino.js"
+import Naipes from "../Filtros/Tarea 3/Naipes.js"
 
 //Clase que habilita los botónes para cada filtro,
 //para subir/guardar una imagen,
@@ -23,6 +28,11 @@ export default class Controller {
     this.filtroInverso = new Inverso(modelo);
     this.filtroConv = new Convolucion(modelo);
     this.filtroComponentes = new Componentes(modelo);
+    this.filtroLetras = new Letras(modelo);
+    this.filtroCombinacion = new Combinacion(modelo);
+    this.filtroFrase = new Frase(modelo);
+    this.filtroDomino = new Domino(modelo);
+    this.filtroNaipes = new Naipes(modelo);
   }
 
   //Gris 1
@@ -123,6 +133,51 @@ export default class Controller {
   //Componentes RGB
   componentes() {
     this.filtroComponentes.componentes();
+  }
+
+  //Colores sin letra
+  colorM() {
+    this.filtroLetras.colorM(prompt('Ingrese una letra o un símbolo'), true, false);
+  }
+
+  //Letra en tonos de gris
+  colorG() {
+    this.filtroLetras.colorG(prompt('Ingrese una letra o un símbolo'), true, false);
+  }
+
+  // 16 letras
+  letras16(){
+    this.filtroLetras.letras16(false, false);
+  }
+
+  //colores + 16 letras
+  colores16(){
+    this.filtroCombinacion.colores16(true, true, false);
+  }
+  
+  //gris + 16 letras
+  gris16(){
+    this.filtroCombinacion.gris16(true, true, false);
+  }
+
+  //Frase
+  frase(){
+    this.filtroFrase.frase(prompt('Ingrese una frase'), true, true);
+  }
+
+  //Dominó Blanco
+  dominoB(){
+    this.filtroDomino.dominoB(true, true, false);
+  }
+
+  //Dominó Negro
+  dominoN(){
+    this.filtroDomino.dominoN(true, true, false);
+  }
+
+  // Naipes
+  naipes(){
+    this.filtroNaipes.naipes(true, true, false);
   }
 
   //Abrir una imagen

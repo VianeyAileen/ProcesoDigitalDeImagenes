@@ -3,7 +3,7 @@ Curso: Proceso Digital De Imágenes 2021-2 de la Facultad de Ciencias, UNAM.
 Grupo: 7012.
 - Profesor: Manuel Cristóbal López Michelone.
 - Ayudante: Yessica Martínez Reyes.
-- Ayuda.Lab: César Hernández Solís
+- Ayuda.Lab: César Hernández Solís.
 
 ## Filtros :star2:
 Filtros Disponibles:
@@ -24,6 +24,17 @@ Filtros Disponibles:
     - Encontrar Bordes
     - Sharpen
     - Emboss
+- Letras
+    - Colores sin Letra
+    - Tonos de Gris
+    - 16 Letras
+    - Colores + 16 letras
+    - Tonos de Gris + 16 letras
+    - Frase
+- Imagen con...
+    - Dominó Blanco
+    - Dominó Negro
+    - Naipes
 - Brillo
 - Mosaico
 - Alto Contraste
