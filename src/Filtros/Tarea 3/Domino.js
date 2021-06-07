@@ -44,7 +44,7 @@ export default class Domino {
                 else if(average >= 76 && average <= 100) cadena = '4';
                 else if(average >= 101 && average <= 125) cadena = '5';
                 else if(average >= 126 && average <= 150) cadena = '6';
-                else if(average >= 156 && average <= 175) cadena = '7';
+                else if(average >= 151 && average <= 175) cadena = '7';
                 else if(average >= 176 && average <= 200) cadena = '8';
                 else if(average >= 201 && average <= 225) cadena = '9';
                 else if(average >= 226 && average <= 256) cadena = '0';
@@ -114,7 +114,7 @@ export default class Domino {
                 else if(average >= 76 && average <= 100) cadena = '4';
                 else if(average >= 101 && average <= 125) cadena = '5';
                 else if(average >= 126 && average <= 150) cadena = '6';
-                else if(average >= 156 && average <= 175) cadena = '7';
+                else if(average >= 151 && average <= 175) cadena = '7';
                 else if(average >= 176 && average <= 200) cadena = '8';
                 else if(average >= 201 && average <= 225) cadena = '9';
                 else if(average >= 226 && average <= 256) cadena = '0';

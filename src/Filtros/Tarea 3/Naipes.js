@@ -48,7 +48,7 @@ export default class Naipes{
                 else if(average >= 172 && average <= 190) cadena = 'J';
                 else if(average >= 191 && average <= 209) cadena = 'K';
                 else if(average >= 210 && average <= 228) cadena = 'L';
-                else if(average >= 220 && average <= 256) cadena = 'M';
+                else if(average >= 229 && average <= 256) cadena = 'M';
 
                 if (!frase) {                    
                     if (!cadena) {
