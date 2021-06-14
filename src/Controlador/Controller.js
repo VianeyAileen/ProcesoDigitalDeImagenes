@@ -34,7 +34,7 @@ export default class Controller {
     this.filtroFrase = new Frase(modelo);
     this.filtroDomino = new Domino(modelo);
     this.filtroNaipes = new Naipes(modelo);
-    this.filtroMarcaAgua = new MarcaAgua(modelo);
+    this.filtroMarca = new MarcaAgua(modelo);
   }
 
   //Gris 1
@@ -184,7 +184,7 @@ export default class Controller {
 
   //Marca Agua
   marcaAgua(){
-    this.filtroMarcaAgua.marcaAgua(prompt('Ingrese una frase'));
+    this.filtroMarca.marcaAgua(prompt('Ingrese una frase'));
   }
 
   //Abrir una imagen
