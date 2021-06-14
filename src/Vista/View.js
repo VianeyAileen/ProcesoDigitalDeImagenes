@@ -144,7 +144,7 @@ export default class View {
     })
 
     document.getElementById("frase").addEventListener("click", () => {
-      $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
+      $('#canvasFiltro').append("<div id='palabra' class = 'palabra'><div>");
       this.controlador.frase();
     })
 
@@ -162,6 +162,11 @@ export default class View {
       $('#lienzo').append("<div id='cartas' class = 'cartas'><div>");
       this.controlador.naipes();
     })
+
+    //Marca agua
+    document.getElementById("marca_de_agua").addEventListener("click", () => {
+      this.controlador.marcaAgua();
+    });
   }
 
   //Mostrar canvas

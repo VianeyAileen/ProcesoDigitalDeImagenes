@@ -31,15 +31,15 @@ Filtros Disponibles:
     - Colores + 16 letras
     - Tonos de Gris + 16 letras
     - Frase
-- Imagen con...
     - Dominó Blanco
     - Dominó Negro
-    - Naipes
+    - Naipes   
 - Brillo
 - Mosaico
 - Alto Contraste
 - Filtro Inverso
 - Componentes RGB
+- Marca de Agua
 
 
 ## Forma de ejecución :octocat:

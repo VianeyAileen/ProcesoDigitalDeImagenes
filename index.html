@@ -77,22 +77,12 @@
                 <a class="dropdown-item" href="#" id="colores_16">Colores + 16 letras</a>
                 <a class="dropdown-item" href="#" id="gris_16">Tonos de gris + 16 letras</a>
                 <a class="dropdown-item" href="#" id="frase">Frase</a>
-              </div>
-            </li>
-
-            <!--Filtro Naipes y Dominó -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Imagen con...
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="#" id="domino_b">Dominó blanco</a>
                 <a class="dropdown-item" href="#" id="domino_n">Dominó negro</a>
                 <a class="dropdown-item" href="#" id="naipes">Naipes</a>
               </div>
             </li>
-            
+
             <!--Filtro Brillo-->
             <li class="nav-item">
               <a class="nav-link active" href="#" id="brillo" data-toggle="modal" data-target="#Modal">
@@ -125,6 +115,13 @@
             <li class="nav-item">
               <a class="nav-link active" href="#" id="componentes" data-toggle="modal" data-target="#Modal">
                 Componentes
+              </a>
+            </li>
+
+            <!--Filtro Marca de Agua-->
+            <li class="nav-item">
+              <a class="nav-link active" href="#" id="marca_de_agua" data-toggle="modal" data-target="#Modal">
+                Marca de Agua
               </a>
             </li>
           </ul>
@@ -160,7 +157,7 @@
           </ol>
           NOTA 1: Para el filtro de brillo se pide la cantidad a aumentar o disminuir de la imagen, si se quiere aumentar hay que poner números positivos
           y si se quiere disminuir hay que poner números negativos. <br>
-          NOTA 2: Para los filtros de <em>Letras</em> e <em>Imagen con...</em> hay que esperar de 4 a 5 segundos para obtener la imagen editada.<br>
+         NOTA 2: Para los filtros de <em>Dominó Blanco</em> <em>Dominó Negro</em> y <em>Naipes</em> hay que esperar de 4 a 5 segundos para obtener la imagen editada.<br>
           La imagen se mostrará por toda la pantalla con zoom para apreciar más los detalles.<br>
           Si se desea aplicar otro filtro que este dentro de <em>Letras</em> e <em>Imagen con...</em> hay que recargar la página.
         </div>
@@ -192,8 +189,8 @@
 <div class="footer" id="nota">
   Alumna: Vianey Aileen Borras Pablo<br>
   Curso: Proceso Digital de imágenes 2021-2 <br>
-  Grupo: 7012
-  
+  Grupo: 7012  
 </div>
+<canvas id ="marca"></canvas>
 
 </html>

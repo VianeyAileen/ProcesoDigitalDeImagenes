@@ -39,6 +39,13 @@ html, body{
 
 }
 
+#marca{
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+}
+
 canvas {
   display: block;
   position: sticky;
@@ -101,4 +108,26 @@ canvas {
     font-family: 'naipescartas';
     src: url(fonts/PLAYCRDS.TTF);
     font-style: regular;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.visualizaciones {
+    width: 510px;
+    height: 410px;
+    margin-bottom: 20px;
+    background-color: rgb(59, 150, 241);
+    font-size: large;
+    border: 10px solid rgb(10, 10, 185);
+}
+
+.fondo-blanco {
+    width: 510px;
+    height: 410px;
+    background-color: white;
+    font-size: large;
+    border: 10px solid rgb(10, 10, 185);
 }

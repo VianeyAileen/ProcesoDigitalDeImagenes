@@ -11,6 +11,7 @@ import Combinacion from "../Filtros/Tarea 3/Combinacion.js"
 import Frase  from "../Filtros/Tarea 3/Frase.js"
 import Domino from "../Filtros/Tarea 3/Domino.js"
 import Naipes from "../Filtros/Tarea 3/Naipes.js"
+import MarcaAgua from "../Filtros/Tarea 4/MarcaAgua.js"
 
 //Clase que habilita los botónes para cada filtro,
 //para subir/guardar una imagen,
@@ -33,6 +34,7 @@ export default class Controller {
     this.filtroFrase = new Frase(modelo);
     this.filtroDomino = new Domino(modelo);
     this.filtroNaipes = new Naipes(modelo);
+    this.filtroMarcaAgua = new MarcaAgua(modelo);
   }
 
   //Gris 1
@@ -178,6 +180,11 @@ export default class Controller {
   // Naipes
   naipes(){
     this.filtroNaipes.naipes(true, true, false);
+  }
+
+  //Marca Agua
+  marcaAgua(){
+    this.filtroMarcaAgua.marcaAgua(prompt('Ingrese una frase'));
   }
 
   //Abrir una imagen
