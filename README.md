@@ -33,13 +33,17 @@ Filtros Disponibles:
     - Frase
     - Dominó Blanco
     - Dominó Negro
-    - Naipes   
-- Brillo
-- Mosaico
-- Alto Contraste
-- Filtro Inverso
-- Componentes RGB
-- Marca de Agua
+    - Naipes
+- Recursiva
+    - Recursivo balnco y negro
+    - Recursivo color
+- Otros
+    - Brillo
+    - Mosaico
+    - Alto Contraste
+    - Filtro Inverso
+    - Componentes RGB
+    - Marca de Agua
 
 
 ## Forma de ejecución :octocat:
@@ -55,4 +59,4 @@ Nota: El programa sólo es compatible con los navegadores de Chrome y Safari.
 - Librería Bootstrap
 
 ## Autora :bust_in_silhouette:
-- [VianeyAileen] (https://github.com/VianeyAileen) (Vianey Aileen Borras Pablo).
+- [VianeyAileen](https://github.com/VianeyAileen) (Vianey Aileen Borras Pablo).
