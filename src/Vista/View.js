@@ -120,52 +120,86 @@ export default class View {
     document.getElementById("colores_sin_letras").addEventListener("click", () => {
       $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
       this.controlador.colorM();
+      $('#quita_letras').css('visibility', 'visible');
     })
 
     //Tonos grises
     document.getElementById("tonos_de_gris").addEventListener("click", () => {
       $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
       this.controlador.colorG();
+      $('#quita_letras').css('visibility', 'visible');
     })
 
+    //16 letras a blanco y negro
     document.getElementById("letras_bn").addEventListener("click", () => {
       $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
       this.controlador.letras16();
+      $('#quita_letras').css('visibility', 'visible');
     })
 
+    //16 letras a color
     document.getElementById("colores_16").addEventListener("click", () => {
       $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
       this.controlador.colores16()
+      $('#quita_letras').css('visibility', 'visible');
     })
 
+    //16 letras en tonos de gris
     document.getElementById("gris_16").addEventListener("click", () => {
       $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
       this.controlador.gris16()
+      $('#quita_letras').css('visibility', 'visible');
     })
 
+    //Frase
     document.getElementById("frase").addEventListener("click", () => {
       $('#lienzo').append("<div id='palabra' class = 'palabra'><div>");
       this.controlador.frase();
+      $('#quita_letras').css('visibility', 'visible');
     })
 
     document.getElementById("domino_b").addEventListener("click", () => {
       $('#lienzo').append("<div id='dominoblanco' class = 'dominoblanco'><div>");
       this.controlador.dominoB();
+      $('#quita_letras').css('visibility', 'visible');
+      
     })
 
     document.getElementById("domino_n").addEventListener("click", () => {
       $('#lienzo').append("<div id='dominonegro' class = 'dominonegro'><div>");
       this.controlador.dominoN();
+      $('#quita_letras').css('visibility', 'visible');
     })
 
     document.getElementById("naipes").addEventListener("click", () => {
       $('#lienzo').append("<div id='cartas' class = 'cartas'><div>");
       this.controlador.naipes();
+      $('#quita_letras').css('visibility', 'visible');
     })
+
+    // Perimite quitar filtro letras de la imagen
+    document.getElementById("quita_letras").addEventListener("click", () => {
+      $('#quita_letras').css('visibility', 'hidden');;
+      $("#palabra").remove();
+      $("#dominoblanco").remove();
+      $("#dominonegro").remove();
+      $("#cartas").remove();
+    });
 
     //Marca Agua
     document.getElementById("marca_de_agua").addEventListener("click", () => {
       this.controlador.marcaAgua();
+    })
+
+    //Recursivo Tonos de Gris
+    document.getElementById("recursivo_bn").addEventListener("click", () => {
+      this.controlador.recursivoByN();
+      $('#aux').remove();
+    })
+
+    //Recursivo Color
+    document.getElementById("recursivo_color").addEventListener("click", () => {
+      controlador.recursivoColor();
     })
   }
 

@@ -20,11 +20,11 @@ html, body{
     grid-column-end: navega;
     grid-row-start: navega;
     grid-row-end: navega;
-
 }
 
 #nav{
     height: 100%;
+    font-size: 1em;
 }
 
 #lienzo{
@@ -41,9 +41,17 @@ html, body{
 
 #marca{
     visibility: hidden;
-    width: 1px;
-    height: 1px;
+    width: 0%;
+    height: 0%;
     background-color: rgb(0, 0, 0);
+}
+
+.aux{
+    visibility: hidden;
+}
+
+#quita_letras{
+    visibility: hidden;
 }
 
 canvas {
@@ -51,7 +59,7 @@ canvas {
   position: sticky;
   border: 1px solid black;
   background: lightgray;
-  box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.35);
+  /*box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.35);*/
 }
 
 #file{
@@ -67,28 +75,28 @@ canvas {
     font-family: monospace;
     font-size: 9px;
     text-align: center;
-    line-height: .7em;
+    line-height: .8em;
     background-color: white;
 }
 
 .dominoblanco{
     font-family: dominoblanco;
     font-size: 6px;
-    line-height: .7em;
+    line-height: .8em;
     background-color: white;
 }
 
 .dominonegro{
     font-family: dominonegro;
     font-size: 6px;
-    line-height: .7em;
+    line-height: .8em;
     background-color: white;
 }
 
 .cartas{
     font-family: naipescartas;
     font-size: 9px;
-    line-height: .7em;
+    line-height: .8em;
     background-color: white;
 }
 
@@ -108,26 +116,4 @@ canvas {
     font-family: 'naipescartas';
     src: url(fonts/PLAYCRDS.TTF);
     font-style: regular;
-}
-
-.imagenes {
-    display: flex;
-    justify-content: space-around;
-}
-
-.visualizaciones {
-    width: 510px;
-    height: 410px;
-    margin-bottom: 20px;
-    background-color: rgb(59, 150, 241);
-    font-size: large;
-    border: 10px solid rgb(10, 10, 185);
-}
-
-.fondo-blanco {
-    width: 510px;
-    height: 410px;
-    background-color: white;
-    font-size: large;
-    border: 10px solid rgb(10, 10, 185);
 }

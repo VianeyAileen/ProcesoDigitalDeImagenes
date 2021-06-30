@@ -12,6 +12,8 @@ import Frase  from "../Filtros/Tarea 3/Frase.js"
 import Domino from "../Filtros/Tarea 3/Domino.js"
 import Naipes from "../Filtros/Tarea 3/Naipes.js"
 import MarcaAgua from "../Filtros/Tarea 4/MarcaAgua.js"
+import RecursivoByN from "../Filtros/Tarea 5/RecursivoByN.js"
+import RecursivoColor from "../Filtros/Tarea 5/RecursivoColor.js"
 
 //Clase que habilita los botónes para cada filtro,
 //para subir/guardar una imagen,
@@ -35,6 +37,8 @@ export default class Controller {
     this.filtroDomino = new Domino(modelo);
     this.filtroNaipes = new Naipes(modelo);
     this.filtroMarca = new MarcaAgua(modelo);
+    this.filtroRecursivoByN = new RecursivoByN(modelo);
+    this.filtroRecursivoColor = new RecursivoColor(modelo);
   }
 
   //Gris 1
@@ -84,7 +88,9 @@ export default class Controller {
 
   //Brillo
   brillo() {
-    this.filtroBrillo.brillo(parseInt(prompt('Indique la cantidad de brillo que desea: ')));
+    this.filtroBrillo.brillo(parseInt(prompt(`Indique la cantidad de brillo que desea:
+    - Más brillo valores del 0 a 255
+    - Menos brillo valores del 0 a -255 `)));
   }
 
   //Mosaico
@@ -185,6 +191,16 @@ export default class Controller {
   //Marca Agua
   marcaAgua(){
     this.filtroMarca.marcaAgua(prompt('Ingrese una frase'));
+  }
+
+  //Recursivo Tonos de Gris
+  recursivoByN() {
+    this.filtroRecursivoByN.recursivoByN(true);
+  }
+
+  //Recursivo Color
+  recursivoColor() {
+    this.filtroRecursivoColor.recursivoColor(true);
   }
 
   //Abrir una imagen

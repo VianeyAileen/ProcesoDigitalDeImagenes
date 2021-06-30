@@ -4,14 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <!-- Permite ver la pagina en cualquier dispositivo-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
   <!--Título de la pagina-->
   <title>PDI 2021-2</title>
   <!--Importamos archivos necesarios para el diseño de la interfaz-->
   <link rel="stylesheet" href="bootStrap/bootstrap.min.css">
-  <script src="bootStrap/jquery.min.js"></script>
-  <script src="bootStrap/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -82,47 +80,33 @@
                 <a class="dropdown-item" href="#" id="naipes">Naipes</a>
               </div>
             </li>
-            
-            <!--Filtro Brillo-->
-            <li class="nav-item">
-              <a class="nav-link active" href="#" id="brillo" data-toggle="modal" data-target="#Modal">
-                Brillo
+
+            <!--Filtro Recursiva -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Recursiva
               </a>
-            </li>
-    
-            <!--Filtro Mosaico-->
-            <li class="nav-item">
-              <a class="nav-link active" href="#" id="mosaico" data-toggle="modal" data-target="#Modal">
-                Mosaico
-              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#" id="recursivo_bn">Recursivo blanco y negro</a>
+                <a class="dropdown-item" href="#" id="recursivo_color">Recursivo color</a>
+              </div>
             </li>
 
-            <!--Filtro Alto Contraste-->
-            <li class="nav-item">
-              <a class="nav-link active" href="#" id="alto_contraste" data-toggle="modal" data-target="#Modal">
-                Alto Contraste
+            <!--Otros Filtros que no sabía donde ponerlos -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Otros
               </a>
-            </li>
-
-            <!--Filtro Inverso-->
-            <li class="nav-item">
-              <a class="nav-link active" href="#" id="inverso" data-toggle="modal" data-target="#Modal">
-                Inverso
-              </a>
-            </li>
-
-            <!--Filtro Componentes RGB-->
-            <li class="nav-item">
-              <a class="nav-link active" href="#" id="componentes" data-toggle="modal" data-target="#Modal">
-                Componentes
-              </a>
-            </li>
-
-            <!--Filtro Marca de Agua-->
-            <li class="nav-item">
-              <a class="nav-link active" href="#" id="marca_de_agua" data-toggle="modal" data-target="#Modal">
-                Marca de Agua
-              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#" id="brillo">Brillo</a>
+                <a class="dropdown-item" href="#" id="mosaico">Mosaico</a>
+                <a class="dropdown-item" href="#" id="alto_contraste">Alto Contraste</a>
+                <a class="dropdown-item" href="#" id="inverso">Inverso</a>
+                <a class="dropdown-item" href="#" id="componentes">Componentes</a>
+                <a class="dropdown-item" href="#" id="marca_de_agua">Marca de Agua</a>
+              </div>
             </li>
           </ul>
 
@@ -131,6 +115,7 @@
             <a href="#" id="abrir">&nbsp;Elegir Imagen&nbsp;</a>
             <a href="#" id="guardar">&nbsp;Descargar Imagen&nbsp;</a>
             <a href="#" id="rehacer">&nbsp;Quitar Filtro&nbsp;</a>
+            <a href="#" id="quita_letras">&nbsp;Quitar Letras&nbsp;</a>
           </span>
         </div>
       </nav>
@@ -145,24 +130,19 @@
           </button>
         </h5>
       </div>
-  
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
         <div class="card-body" style="background-color: #ede4f8;">
           <ol>
             <li>Para subir una imagen, dar click en <em>Elegir Imagen</em>.</li>
             <li>Una vez elegida la imagen, se puede elegir el filtro a aplicar sobre la imagen.</li>
             <li>Una vez que se haya aplicado el filtro se puede descargar la imagen sólo basta con dar click en <em>Descargar Imagen</em>.</li>
             <li>Si se desea aplicar otro filtro a la imagen, hay que dar click en <em>Quitar Filtro</em> para regresar a la imagen original y aplicar el filtro deseado.</li>
-            <li>Si desea esconder las instrucciones de click sobre <em>INSTRUCCIONES</em></li>
+            <li>En caso de que se desea aplicar los filtros que estan dentro de la opción <em>Letras</em>, aparecera una opción <em>Quitar Letras</em> para poder quitar dicho filtro y poder elegir otro</li>
           </ol>
-          NOTA 1: Para el filtro de brillo se pide la cantidad a aumentar o disminuir de la imagen, si se quiere aumentar hay que poner números positivos
-          y si se quiere disminuir hay que poner números negativos. <br>
-          NOTA 2: Para los filtros de <em>Letras</em> e <em>Imagen con...</em> hay que esperar de 4 a 5 segundos para obtener la imagen editada.<br>
-          La imagen se mostrará por toda la pantalla con zoom para apreciar más los detalles.<br>
-          Si se desea aplicar otro filtro que este dentro de <em>Letras</em> e <em>Imagen con...</em> hay que recargar la página.
         </div>
       </div>
-    </div>     
+    </div> 
   </div>
 
   <!--canvas a dibujar-->
@@ -178,8 +158,11 @@
        <canvas id="canvasFiltro" width=500 height=400></canvas>
       </div>            
    </div>
+   <script src="bootStrap/jquery.min.js"></script>
+   <script src="bootStrap/bootstrap.min.js"></script>
    <!--Script principal del proyecto-->
-   <script type="module" src="../ProcesoDigitalDeImagenes/src/Interfaz.js"></script>   
+   <!--<script type="module" src="../ProcesoDigitalDeImagenes/src/Interfaz.js"></script>-->
+   <script type="module" src="/src/Interfaz.js"></script>
 </body>
 
 <!-- Para elegir el archivo a subir-->
@@ -192,4 +175,6 @@
   Grupo: 7012  
 </div>
 <canvas id ="marca"></canvas>
+<!--Canvas donde se irán poniendo las imagenes recursivas-->
+<canvas id="aux"></canvas>
 </html>
