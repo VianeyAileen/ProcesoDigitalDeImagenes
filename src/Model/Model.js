@@ -27,7 +27,7 @@ export default class Model {
     this.contextA = this.canvasA.getContext("2d");
   }
   
-  //Ponemos la imagen en los dos lienzos, cuyo tamaño esta definido por los valores que.
+  //Ponemos la imagen en los dos lienzos, cuyo tamaño esta definico por los valores que.
   setImage(image) {
     this.image=image;
     this.canvas.setAttribute("width", this.canvas.width);
