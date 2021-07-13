@@ -37,6 +37,10 @@ Filtros Disponibles:
 - Recursiva
     - Recursivo balnco y negro
     - Recursivo color
+- Semitonos
+    - Semitono 1
+    - Semitono 2
+    - Semitono 3
 - Otros
     - Brillo
     - Mosaico

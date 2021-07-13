@@ -84,34 +84,42 @@ export default class View {
       this.controlador.altoContraste();
     });
 
+    //Inverso
     document.getElementById("inverso").addEventListener("click", () => {
       this.controlador.inverso();
     });
 
+    //Blur 1
     document.getElementById("blur1").addEventListener("click", () => {
       this.controlador.blur1();
     });
 
+    //Blur 2
     document.getElementById("blur2").addEventListener("click", () => {
       this.controlador.blur2();
     });
 
+    //Motion Blur
     document.getElementById("motion_blur").addEventListener("click", () => {
       this.controlador.motionBlur();
     });
 
+    //Encontrar Bordes
     document.getElementById("encontrar_bordes").addEventListener("click", () => {
       this.controlador.encontrarBordes();
     });
 
+    //Sharpen
     document.getElementById("sharpen").addEventListener("click", () => {
       this.controlador.sharpen();
     });
 
+    //Emboss
     document.getElementById("emboss").addEventListener("click", () => {
       this.controlador.emboss();
     });
 
+    //Componentes
     document.getElementById("componentes").addEventListener("click", () => {
       this.controlador.componentes();
     });
@@ -158,6 +166,7 @@ export default class View {
       $('#quita_letras').css('visibility', 'visible');
     })
 
+    //Dominó Blanco
     document.getElementById("domino_b").addEventListener("click", () => {
       $('#lienzo').append("<div id='dominoblanco' class = 'dominoblanco'><div>");
       this.controlador.dominoB();
@@ -165,12 +174,14 @@ export default class View {
       
     })
 
+    //Dominó Negro
     document.getElementById("domino_n").addEventListener("click", () => {
       $('#lienzo').append("<div id='dominonegro' class = 'dominonegro'><div>");
       this.controlador.dominoN();
       $('#quita_letras').css('visibility', 'visible');
     })
 
+    //Naipes
     document.getElementById("naipes").addEventListener("click", () => {
       $('#lienzo').append("<div id='cartas' class = 'cartas'><div>");
       this.controlador.naipes();
@@ -194,13 +205,27 @@ export default class View {
     //Recursivo Tonos de Gris
     document.getElementById("recursivo_bn").addEventListener("click", () => {
       this.controlador.recursivoByN();
-      $('#aux').remove();
     })
 
     //Recursivo Color
     document.getElementById("recursivo_color").addEventListener("click", () => {
       controlador.recursivoColor();
     })
+
+    //Semitono 1
+    document.getElementById("dithering_1").addEventListener("click", () => {
+      controlador.semiTono1();
+    })
+
+    //Semitono 2
+    document.getElementById("dithering_2").addEventListener("click", () => {
+      controlador.semiTono2();
+    })
+
+    //Semitono 3
+    document.getElementById("dithering_3").addEventListener("click", () => {
+      controlador.semiTono3();
+    })    
   }
 
   //Mostrar canvas

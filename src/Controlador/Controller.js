@@ -14,6 +14,9 @@ import Naipes from "../Filtros/Tarea 3/Naipes.js"
 import MarcaAgua from "../Filtros/Tarea 4/MarcaAgua.js"
 import RecursivoByN from "../Filtros/Tarea 5/RecursivoByN.js"
 import RecursivoColor from "../Filtros/Tarea 5/RecursivoColor.js"
+import Semitono1 from "../Filtros/Tarea 6/Semitono1.js"
+import Semitono2 from "../Filtros/Tarea 6/Semitono2.js"
+import Semitono3 from "../Filtros/Tarea 6/Semitono3.js"
 
 //Clase que habilita los botónes para cada filtro,
 //para subir/guardar una imagen,
@@ -39,6 +42,9 @@ export default class Controller {
     this.filtroMarca = new MarcaAgua(modelo);
     this.filtroRecursivoByN = new RecursivoByN(modelo);
     this.filtroRecursivoColor = new RecursivoColor(modelo);
+    this.filtroSemitono1 = new Semitono1(modelo);
+    this.filtroSemitono2 = new Semitono2(modelo);
+    this.filtroSemitono3 = new Semitono3(modelo);
   }
 
   //Gris 1
@@ -202,6 +208,22 @@ export default class Controller {
   recursivoColor() {
     this.filtroRecursivoColor.recursivoColor(true);
   }
+
+  //Semitono1
+  semiTono1() {
+    this.filtroSemitono1.semiTono1();
+  }
+
+  //Semitono2
+  semiTono2() {
+    this.filtroSemitono2.semiTono2();
+  }
+
+  //Semitono3
+  semiTono3() {
+    this.filtroSemitono3.semiTono3();
+  }
+
 
   //Abrir una imagen
   open() {

@@ -50,6 +50,16 @@ html, body{
     visibility: hidden;
 }
 
+#aux2{
+    visibility: hidden;
+}
+
+#st{
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+}
+
 #quita_letras{
     visibility: hidden;
 }
