@@ -17,6 +17,7 @@ import RecursivoColor from "../Filtros/Tarea 5/RecursivoColor.js"
 import Semitono1 from "../Filtros/Tarea 6/Semitono1.js"
 import Semitono2 from "../Filtros/Tarea 6/Semitono2.js"
 import Semitono3 from "../Filtros/Tarea 6/Semitono3.js"
+import MaxMin from "../Filtros/Tarea 7/MaxMin.js"
 
 //Clase que habilita los botónes para cada filtro,
 //para subir/guardar una imagen,
@@ -45,6 +46,7 @@ export default class Controller {
     this.filtroSemitono1 = new Semitono1(modelo);
     this.filtroSemitono2 = new Semitono2(modelo);
     this.filtroSemitono3 = new Semitono3(modelo);
+    this.filtroMaxMin =new MaxMin(modelo);
   }
 
   //Gris 1
@@ -224,6 +226,15 @@ export default class Controller {
     this.filtroSemitono3.semiTono3();
   }
 
+  //Máximo
+  max() {
+    this.filtroMaxMin.max();
+  }
+
+  //Mínimo
+  min() {
+    this.filtroMaxMin.min();
+  }
 
   //Abrir una imagen
   open() {

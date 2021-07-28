@@ -225,7 +225,17 @@ export default class View {
     //Semitono 3
     document.getElementById("dithering_3").addEventListener("click", () => {
       controlador.semiTono3();
-    })    
+    })
+    
+    //Máximo
+    document.getElementById("max").addEventListener("click", () => {
+      this.controlador.max();
+    })
+
+    //Mínimo
+    document.getElementById("min").addEventListener("click", () => {
+      this.controlador.min()
+    })
   }
 
   //Mostrar canvas

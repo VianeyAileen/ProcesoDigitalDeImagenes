@@ -41,6 +41,9 @@ Filtros Disponibles:
     - Semitono 1
     - Semitono 2
     - Semitono 3
+- Máximo y Mínimo
+    - Máximo
+    - Mínimo
 - Otros
     - Brillo
     - Mosaico
