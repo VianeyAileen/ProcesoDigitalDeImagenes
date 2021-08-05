@@ -236,6 +236,21 @@ export default class View {
     document.getElementById("min").addEventListener("click", () => {
       this.controlador.min()
     })
+
+    //RandomDither
+    document.getElementById("random").addEventListener("click", () => {
+      this.controlador.randomDither()
+    })
+
+    //OrderedDither
+    document.getElementById("order").addEventListener("click", () => {
+      this.controlador.orderedDither()
+    })
+
+    //DispersedDither
+    document.getElementById("dispersed").addEventListener("click", () => {
+      this.controlador.dispersedDither()
+    })
   }
 
   //Mostrar canvas

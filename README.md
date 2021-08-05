@@ -44,6 +44,10 @@ Filtros Disponibles:
 - Máximo y Mínimo
     - Máximo
     - Mínimo
+- Dithering 
+    - Random Dithering
+    - Ordered Dithering
+    - Dispersed Dithering
 - Otros
     - Brillo
     - Mosaico

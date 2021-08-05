@@ -18,6 +18,9 @@ import Semitono1 from "../Filtros/Tarea 6/Semitono1.js"
 import Semitono2 from "../Filtros/Tarea 6/Semitono2.js"
 import Semitono3 from "../Filtros/Tarea 6/Semitono3.js"
 import MaxMin from "../Filtros/Tarea 7/MaxMin.js"
+import RandomDither from "../Filtros/Tarea 8/RandomDither.js"
+import OrderedDithering from "../Filtros/Tarea 8/OrderedDithering.js"
+import DispersedDithering from "../Filtros/Tarea 8/DispersedDithering.js"
 
 //Clase que habilita los botónes para cada filtro,
 //para subir/guardar una imagen,
@@ -47,6 +50,9 @@ export default class Controller {
     this.filtroSemitono2 = new Semitono2(modelo);
     this.filtroSemitono3 = new Semitono3(modelo);
     this.filtroMaxMin =new MaxMin(modelo);
+    this.filtroRandomDither = new RandomDither(modelo);
+    this.filtroOrderedDither = new OrderedDithering(modelo);
+    this.filtroDispersedDither = new DispersedDithering(modelo);
   }
 
   //Gris 1
@@ -234,6 +240,21 @@ export default class Controller {
   //Mínimo
   min() {
     this.filtroMaxMin.min();
+  }
+
+  //Random Dithering
+  randomDither() {
+    this.filtroRandomDither.randomDither();
+  }
+
+  //Ordered Dithering
+  orderedDither() {
+    this.filtroOrderedDither.orderedDither();
+  }
+
+  //Dispersed Dithering
+  dispersedDither() {
+    this.filtroDispersedDither.dispersedDither();
   }
 
   //Abrir una imagen
