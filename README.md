@@ -48,7 +48,6 @@ Filtros Disponibles:
     - Random Dithering
     - Ordered Dithering
     - Dispersed Dithering
-- Fotomosaico
 - Otros
     - Brillo
     - Mosaico
